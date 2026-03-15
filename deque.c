@@ -3,6 +3,7 @@
 #include "node.h"
 #include "stdbool.h"
 #include "stdlib.h"
+#include "stdio.h"
 
 #define ERROR_RETURN -1
 
@@ -73,7 +74,7 @@ void findElement(Deque* deque, int value)
     while (currentNode != NULL)
     {
         if(currentNode->data == value)
-            printf("[%d] - %d!\n", pos, value);
+            printf("[%d] - %d\n", pos, value);
 
         currentNode = currentNode->next;
         pos++;
