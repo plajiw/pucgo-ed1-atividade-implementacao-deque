@@ -3,7 +3,7 @@
 
 Node *createNode(int item)
 {
-    Node *newNode = malloc(sizeof(Node));
+    Node *newNode = (Node*)malloc(sizeof(Node));
     if (newNode != NULL)
     {
         newNode->data = item;

@@ -1,37 +1,43 @@
+#include <stdbool.h>
+
 #ifndef DEQUE_H
 #define DEQUE_H
 
 typedef struct deque
 {
     int size;
-    struct node *head;
-    struct node *tail;
+    struct node* head;
+    struct node* tail;
 } Deque;
 
-void createDeque(Deque *d);
+void createDeque(Deque* deque);
 
-void destroyDeque(Deque *d);
+void destroyDeque(Deque* deque);
 
-bool isEmpty(Deque *d);
+void makeEmptyDeque(Deque* deque);
 
-int size(Deque *d);
+bool isEmpty(Deque* deque);
 
-int first(Deque *d);
+bool hasOneElement(Deque* deque);
 
-int last(Deque *d);
+int size(Deque* deque);
 
-void findItem(Deque *d, int value);
+int firstElement(Deque* deque);
 
-void insertFront(Deque *d, int value);
+int lastElement(Deque* deque);
 
-void insertBack(Deque *d, int value);
+void findElement(Deque* deque, int value);
 
-void popFront(Deque *d);
+void insertFront(Deque* deque, int value);
 
-void popBack(Deque *d);
+void insertBack(Deque* deque, int value);
 
-void printFrontBack(Deque *d);
+void popFront(Deque* deque);
 
-void printBackFront(Deque *d);
+void popBack(Deque* deque);
+
+void printFrontBack(Deque* deque);
+
+void printBackFront(Deque* deque);
 
 #endif
